@@ -1,3 +1,41 @@
+/*
+import java.util.*;
+
+class Solution {
+    public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
+        List<List<Integer>> ans = new ArrayList<>();
+        HashMap<Integer,Integer> map1 =  new HashMap<>();
+        
+        for(int num:nums1){
+            map1.put(num,0);
+        }
+        for(int num2:nums2){
+            if(!map1.containsKey(num2)){
+                map1.put(num2,1);
+            }
+            else if(map1.containsKey(num2) && map1.get(num2) == 0){
+                map1.put(num2,99);
+            }
+        }
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
+        for(Map.Entry<Integer, Integer> entry : map1.entrySet()){
+            if(entry.getValue() == 0){
+                list1.add(entry.getKey());
+            }
+            else if(entry.getValue() == 1){
+                list2.add(entry.getKey());
+            }
+        }
+        ans.add(list1);
+        ans.add(list2);
+        return ans;
+    }
+}
+
+*/
+
+
 // class Solution {
 //     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
 //         List<List<Integer>> ans = new ArrayList<>();
